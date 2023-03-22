@@ -1,8 +1,8 @@
 package com.mvi.demo
 
-import com.mvi.demo.data.BaseResponse
-import com.mvi.demo.data.success
-import com.mvi.demo.datasource.remote.WanAndroidApi
+import com.mvi.demo.data.model.BaseResponse
+import com.mvi.demo.data.model.success
+import com.mvi.demo.data.datasource.remote.WanAndroidApi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertFalse

@@ -1,6 +1,6 @@
 package com.mvi.demo.login
 
-import com.mvi.demo.data.User
+import com.mvi.demo.data.model.User
 
 /*****************************************
  * 描  述：

@@ -1,9 +1,9 @@
-package com.mvi.demo.datasource.remote
+package com.mvi.demo.data.datasource.remote
 
-import com.mvi.demo.data.Article
-import com.mvi.demo.data.BaseResponse
-import com.mvi.demo.data.PageData
-import com.mvi.demo.data.User
+import com.mvi.demo.data.model.Article
+import com.mvi.demo.data.model.BaseResponse
+import com.mvi.demo.data.model.PageData
+import com.mvi.demo.data.model.User
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

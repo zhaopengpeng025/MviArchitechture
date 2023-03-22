@@ -1,4 +1,4 @@
-package com.mvi.demo.data
+package com.mvi.demo.data.model
 
 import androidx.room.Entity
 import androidx.room.Fts4

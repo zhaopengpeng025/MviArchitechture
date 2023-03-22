@@ -1,10 +1,10 @@
-package com.mvi.demo.datasource.local
+package com.mvi.demo.data.datasource.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.mvi.demo.data.Article
+import com.mvi.demo.data.model.Article
 
 /**
  * ***************************************

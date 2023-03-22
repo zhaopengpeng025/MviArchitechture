@@ -8,9 +8,6 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import kotlin.reflect.KProperty1
 
-/**
- * flow部分
- */
 fun <T, A> StateFlow<T>.observeState(
     lifecycleOwner: LifecycleOwner,
     prop1: KProperty1<T, A>,
@@ -20,7 +17,7 @@ fun <T, A> StateFlow<T>.observeState(
         lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
             this@observeState.map {
                 StateTuple1(prop1.get(it))
-            }.distinctUntilChanged().collect { (a) ->
+            }.collect { (a) ->
                 action.invoke(a)
             }
         }

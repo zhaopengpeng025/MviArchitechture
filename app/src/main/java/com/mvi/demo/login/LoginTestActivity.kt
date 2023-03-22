@@ -27,9 +27,6 @@ class LoginTestActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     binding = LayoutLogin2Binding.inflate(LayoutInflater.from(this))
     setContentView(binding.root)
-
-    setContent {  }
-
     binding.compose.setContent {
       PasswordTextField()
     }

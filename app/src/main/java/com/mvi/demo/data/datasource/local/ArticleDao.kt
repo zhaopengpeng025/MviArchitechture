@@ -1,10 +1,10 @@
-package com.mvi.demo.datasource.local
+package com.mvi.demo.data.datasource.local
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.mvi.demo.data.Article
+import com.mvi.demo.data.model.Article
 import kotlinx.coroutines.flow.Flow
 
 /**

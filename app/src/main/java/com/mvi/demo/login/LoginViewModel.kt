@@ -2,8 +2,8 @@ package com.mvi.demo.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mvi.demo.data.success
-import com.mvi.demo.repository.Repository
+import com.mvi.demo.data.model.success
+import com.mvi.demo.data.repository.Repository
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow

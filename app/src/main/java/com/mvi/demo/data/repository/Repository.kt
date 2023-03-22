@@ -1,9 +1,9 @@
-package com.mvi.demo.repository
+package com.mvi.demo.data.repository
 
-import com.mvi.demo.data.Article
-import com.mvi.demo.data.success
-import com.mvi.demo.datasource.local.ArticleDao
-import com.mvi.demo.datasource.remote.WanAndroidApi
+import com.mvi.demo.data.model.Article
+import com.mvi.demo.data.model.success
+import com.mvi.demo.data.datasource.local.ArticleDao
+import com.mvi.demo.data.datasource.remote.WanAndroidApi
 import kotlinx.coroutines.flow.Flow
 
 /**

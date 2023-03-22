@@ -31,12 +31,12 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.ViewModelInitializer
 import com.mvi.demo.R
-import com.mvi.demo.data.Article
-import com.mvi.demo.data.User
+import com.mvi.demo.data.model.Article
+import com.mvi.demo.data.model.User
 import com.mvi.demo.databinding.ActivityHomeBinding
-import com.mvi.demo.datasource.local.WanDatabase
-import com.mvi.demo.datasource.remote.WanAndroidApi
-import com.mvi.demo.repository.Repository
+import com.mvi.demo.data.datasource.local.WanDatabase
+import com.mvi.demo.data.datasource.remote.WanAndroidApi
+import com.mvi.demo.data.repository.Repository
 
 /**
  * **************************************
@@ -58,7 +58,8 @@ class HomeActivity : AppCompatActivity() {
               HomeViewModel(
                   Repository(
                       WanAndroidApi.create(),
-                      WanDatabase.getInstance(this@HomeActivity).getArticleDao()))
+                      WanDatabase.getInstance(this@HomeActivity).getArticleDao())
+              )
             })
       }
 

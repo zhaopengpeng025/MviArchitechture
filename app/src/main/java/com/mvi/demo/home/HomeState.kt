@@ -1,6 +1,6 @@
 package com.mvi.demo.home
 
-import com.mvi.demo.data.Article
+import com.mvi.demo.data.model.Article
 
 /*****************************************
  * 描  述：

@@ -1,4 +1,4 @@
-package com.mvi.demo.repository
+package com.mvi.demo.data.repository
 
 import okhttp3.internal.notify
 import okhttp3.internal.wait

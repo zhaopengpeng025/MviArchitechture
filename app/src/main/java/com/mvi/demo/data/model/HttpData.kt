@@ -1,4 +1,4 @@
-package com.mvi.demo.data
+package com.mvi.demo.data.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
