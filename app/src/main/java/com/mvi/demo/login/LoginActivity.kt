@@ -34,17 +34,17 @@ class LoginActivity : AppCompatActivity() {
 
   private lateinit var binding: LayoutLoginBinding
 
-  private val viewModel by
-      viewModels<LoginViewModel> {
-        ViewModelProvider.Factory.from(
-            ViewModelInitializer(LoginViewModel::class.java) {
-              LoginViewModel(
-                  Repository(
-                      WanAndroidApi.create(),
-                      WanDatabase.getInstance(this@LoginActivity).getArticleDao())
-              )
-            })
-      }
+  private val viewModel by viewModels<LoginViewModel> {
+    ViewModelProvider.Factory.from(
+      ViewModelInitializer(LoginViewModel::class.java) {
+        LoginViewModel(
+          Repository(
+            WanAndroidApi.create(),
+            WanDatabase.getInstance(this@LoginActivity).getArticleDao()
+          )
+        )
+      })
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -91,15 +91,14 @@ class LoginActivity : AppCompatActivity() {
             is LoginViewEvent.ShowLoading -> binding.progress.visibility = View.VISIBLE
             is LoginViewEvent.DismissLoading -> binding.progress.visibility = View.GONE
             is LoginViewEvent.ShowToast ->
-                Toast.makeText(this@LoginActivity, it.message, Toast.LENGTH_SHORT).show()
+              Toast.makeText(this@LoginActivity, it.message, Toast.LENGTH_SHORT).show()
             is LoginViewEvent.LoginSuccess -> {
               startActivity(
-                  Intent(this@LoginActivity, HomeActivity::class.java).apply {
-                    putExtra("user", it.user)
-                  })
+                Intent(this@LoginActivity, HomeActivity::class.java).apply {
+                  putExtra("user", it.user)
+                })
               finish()
             }
-            else -> {}
           }
         }
       }
