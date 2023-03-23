@@ -26,6 +26,7 @@ class LoginViewModel(private val repository: Repository) : ViewModel() {
   private val _uiEvent = MutableSharedFlow<LoginViewEvent>()
   val uiEvent = _uiEvent.asSharedFlow()
 
+
   fun updateName(name: String) {
     _uiState.update { it.copy(name = name) }
   }

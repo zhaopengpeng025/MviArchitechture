@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import com.mvi.demo.databinding.LayoutLogin2Binding
 
 /**
@@ -35,6 +35,23 @@ class LoginTestActivity : AppCompatActivity() {
   @OptIn(ExperimentalMaterial3Api::class)
   @Composable
   fun PasswordTextField() {
-    OutlinedTextField(value = "", onValueChange = {}, label = { Text(text = "密码-Compose") })
+    var password by remember {
+      mutableStateOf("")
+    }
+    OutlinedTextField(value = password, onValueChange = {
+      password = it
+
+    }, label = { Text(text = "密码-Compose") })
   }
+}
+/**
+ * 无状态 stateLess
+ * TextView text
+ *
+ */
+
+@Composable
+fun A() {
+
+  Text("Apple")
 }
